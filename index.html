@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="やりますねえ！">
+  <title>BGM Player</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+    #title { font-size: 20px; margin-bottom: 20px; }
+  </style>
+<body>
+  <div class="player-container">
+    <h1>🎧 BGM Player</h1>
+    <div id="title">Now Playing: none</div>
+    <audio id="player"></audio>
+
+    <div class="controls">
+      <button onclick="play()">▶</button>
+      <button onclick="pause()">⏸</button>
+      <button onclick="next()">⏭</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<style>
+  body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .player-container {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+  }
+
+  h1 {
+    color: #1db954; /* Spotifyの緑 */
+    margin-bottom: 10px;
+  }
+
+  #title {
+    margin-bottom: 25px;
+    font-size: 16px;
+    opacity: 0.8;
+  }
+
+  .controls button {
+    background-color: #1db954;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .controls button:hover {
+    background-color: #1ed760;
+    transform: scale(1.1);
+  }
+</style>
+
+</html>
